@@ -1,0 +1,53 @@
+name: Feature request
+description: Propose something the product should do
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read the **Things that are deliberate** section of
+        [CONTRIBUTING.md](https://github.com/kaffeelisten/.github/blob/main/CONTRIBUTING.md)
+        first. No member login and no payment processing are decisions, not gaps.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What is hard or impossible today. Describe the situation, not the solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like it to do
+    validations:
+      required: true
+
+  - type: dropdown
+    id: who
+    attributes:
+      label: Who is this for
+      options:
+        - A campus member logging what they took
+        - The campus administrator
+        - A company being billed
+        - Whoever operates the deployment
+    validations:
+      required: true
+
+  - type: textarea
+    id: fifteen-seconds
+    attributes:
+      label: Effect on the member flow
+      description: >
+        The member flow has to finish in under fifteen seconds, standing up, one-handed. If this
+        touches it, say how it stays inside that. If it does not touch it, say so.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What else you considered
+      description: Including whether something outside the product solves it.

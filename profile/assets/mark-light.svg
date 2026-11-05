@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" width="640" height="200" role="img" aria-label="A one-line drawing of a coffee cup on a counter">
+  <g fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- steam -->
+    <path d="M304 78 C298 67 310 60 304 49" opacity="0.75"/>
+    <path d="M320 74 C314 61 326 54 320 40" opacity="0.9"/>
+    <path d="M336 78 C330 67 342 60 336 49" opacity="0.75"/>
+    <!-- cup -->
+    <path d="M279 95 L361 95 L351 141 C349 148 343 151 337 151 L303 151 C297 151 291 148 289 141 Z"/>
+    <path d="M361 103 C385 103 386 118 385 124 C383 131 372 134 362 133"/>
+    <!-- saucer -->
+    <path d="M264 165 L376 165"/>
+  </g>
+  <!-- the counter -->
+  <g fill="none" stroke="#A8A29E" stroke-width="1.25" stroke-linecap="round">
+    <path d="M40 165 L248 165" opacity="0.7"/>
+    <path d="M392 165 L600 165" opacity="0.7"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/kaffeelisten/.github/blob/main/SECURITY.md
+    about: Do not open an issue. Report it privately through the Security tab.
+  - name: Running Kaffeelisten at another campus
+    url: https://github.com/kaffeelisten/kaffeelisten/discussions
+    about: Deployment questions and anything about a second installation.
+  - name: How to contribute
+    url: https://github.com/kaffeelisten/.github/blob/main/CONTRIBUTING.md
+    about: Conventions, the gates, and the decisions that are deliberate.
