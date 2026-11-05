@@ -8,8 +8,6 @@ holds no application code.
 | `profile/README.md` | The organisation's public profile page. |
 | `brand/BRAND.md` | **The brand book** — logo, marks, palettes, type, voice, usage rules. |
 | `brand/logo/` | Logo and mark SVGs, palette variants, and the 512&times;512 avatar. |
-| `brand/social/` | 1280&times;640 social previews, light and dark. |
-| `brand/render.mjs` | Regenerates the PNGs from the SVGs. |
 | `SECURITY.md` | How to report a vulnerability. Applies to every repository. |
 | `CONTRIBUTING.md` | Conventions, the gates, and the decisions that are deliberate. |
 | `CODE_OF_CONDUCT.md` | How we deal with each other. |

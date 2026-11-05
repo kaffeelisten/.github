@@ -1,7 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kaffeelisten/.github/main/brand/social/social-preview-dark.png">
-  <img src="https://raw.githubusercontent.com/kaffeelisten/.github/main/brand/social/social-preview.png" alt="Kaffeelisten — die Kaffeeliste, ohne Papier" width="820">
-</picture>
+<!-- banner: new brand kit in progress -->
 
 # Kaffeelisten
 
