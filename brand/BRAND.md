@@ -32,6 +32,7 @@ sidebar and the social card are literally the same drawing.
 | `logo/logo-mono.svg` | Single colour, outlined square. For one-colour printing and stamps. |
 | `logo/logo-itc1.svg`, `logo-wald.svg`, `logo-imperium.svg` | Palette variants. |
 | `logo/avatar-512.png` | 512×512 raster. The organisation avatar. |
+| `illustrations/tally-to-tablet.svg` | **The brand illustration.** The paper list and the tablet that replaces it. |
 | `social/social-preview.png`, `social-preview-dark.png` | 1280×640, GitHub's 2:1 social preview. |
 
 **The square is `rx="40"` on a 200×200 viewBox** — a 20% corner radius. Keep that ratio at every
@@ -141,16 +142,44 @@ Lines that are approved and in use: *Die Kaffeeliste – ohne Papier.* · *Table
 
 ## Illustration
 
-**One-line SVG, single weight, `currentColor`.** The icon set lives in
-`apps/web/public/assets/icons/` (27 icons) and the illustrations in
+**The brand is a vector line system, not a picture library.** Everything is drawn from the same
+construction, so the logo, a 24px icon and a full illustration read as one hand:
+
+```
+fill="none"  stroke="currentColor"  stroke-linecap="round"  stroke-linejoin="round"
+```
+
+| Scale | viewBox | stroke-width |
+|---|---|---|
+| Icon | `0 0 24 24` | `1.5` |
+| Illustration | `0 0 200 N` | `2` |
+| Logo mark, inside the square | `0 0 200 200` | `3.5` |
+
+The icon set lives in `apps/web/public/assets/icons/` (27 icons) and the app's illustrations in
 `apps/web/public/assets/illustrations/` — `beans-trio`, `campus-skyline`, `cappuccino-white`,
-`empty-cup`, `pine-silhouette`.
+`empty-cup`, `pine-silhouette`. The brand illustration here is built to the same rules.
+
+**`currentColor` is the point.** An illustration inherits the text colour of wherever it sits, so
+one file works in light mode, dark mode, at the accent colour and in muted grey. An `<img>` of the
+same SVG cannot do this — inline it, or set `color` on a wrapper.
 
 Coffee motifs as playful detail; Bavarian Wald as atmosphere, abstract rather than touristic. No
 rustic textures, no photographic imagery, no stock illustration.
 
 An illustration never carries text. Every name and number stays real text, so it stays
 translatable, selectable and accessible.
+
+### Adding one
+
+Author the SVG by hand against the table above, from simple primitives — `path`, `rect`,
+`ellipse`, `circle` — on a round-numbered grid. Then look at it at **three sizes and two themes**
+before committing; `brand/render.mjs` is a working example of how to proof it.
+
+**Do not generate illustrations for this system with an image model.** A raster cannot inherit
+`currentColor`, cannot scale to a 24px icon, and will not hold a 2px stroke — in practice the
+model returns filled flat shapes, which is a different language from this one. Image generation
+is the right tool for a portfolio banner or a textured scene; it is the wrong tool for extending a
+line system that has to theme and scale.
 
 ---
 

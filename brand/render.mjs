@@ -20,18 +20,18 @@ const BRAND = process.argv[2]
 const CHROME = process.env.CHROMIUM_PATH
 
 const logo = readFileSync(join(BRAND, 'logo', 'logo.svg'), 'utf8')
-const mark = readFileSync(join(BRAND, 'logo', 'mark-cappuccino.svg'), 'utf8')
+const ill = readFileSync(join(BRAND, 'illustrations', 'tally-to-tablet.svg'), 'utf8')
 
 const THEMES = {
   light: {
     bg: '#FAFAF9', surface2: '#F5F5F4', border: '#E7E5E4',
     fg: '#1C1917', fgMuted: '#57534E',
-    accent: '#D97706', ghost: '#FDE8C8', square: '#D97706',
+    accent: '#D97706', square: '#D97706',
   },
   dark: {
     bg: '#1C1917', surface2: '#33302E', border: '#44403C',
     fg: '#F5F5F4', fgMuted: '#A8A29E',
-    accent: '#F59E0B', ghost: '#3D2D14', square: '#F59E0B',
+    accent: '#F59E0B', square: '#F59E0B',
   },
 }
 
@@ -49,11 +49,11 @@ const chips = ['Tablet statt Strichliste', 'Monatsbericht automatisch', 'Kein Lo
 
 const social = t => `
 <div style="position:relative;width:1280px;height:640px;background:${t.bg};overflow:hidden">
-  <div style="position:absolute;right:-110px;top:50%;transform:translateY(-50%);color:${t.ghost};width:760px">
-    ${mark.replace('<svg', '<svg style="width:760px;height:auto;display:block"')}
+  <div style="position:absolute;right:56px;top:50%;transform:translateY(-50%);color:${t.accent};width:470px">
+    ${ill.replace('<svg', '<svg style="width:470px;height:auto;display:block"')}
   </div>
   <div style="position:absolute;left:0;top:0;bottom:0;width:12px;background:${t.accent}"></div>
-  <div style="position:relative;padding:112px 0 0 104px;max-width:800px">
+  <div style="position:relative;padding:112px 0 0 104px;max-width:700px">
     <div style="display:flex;align-items:center;gap:28px">
       ${logo.replace('#D97706', t.square).replace('<svg', '<svg style="width:104px;height:104px;display:block"')}
       <div style="font-size:16px;font-weight:600;letter-spacing:.16em;color:${t.accent}">KAFFEELISTEN.DE</div>
@@ -61,7 +61,7 @@ const social = t => `
     <div style="margin-top:54px;font-size:84px;font-weight:700;letter-spacing:-.025em;color:${t.fg};line-height:1">Kaffeelisten</div>
     <div style="margin-top:26px;font-size:34px;font-weight:400;color:${t.fgMuted};line-height:1.35">Die Kaffeeliste &ndash; ohne Papier.</div>
     <div style="margin-top:42px;display:flex;gap:14px">
-      ${chips.map(c => `<span style="font-size:17px;font-weight:500;color:${t.fgMuted};background:${t.surface2};border:1px solid ${t.border};border-radius:999px;padding:10px 20px">${c}</span>`).join('')}
+      ${chips.map(c => `<span style="font-size:17px;font-weight:500;color:${t.fgMuted};background:${t.surface2};border:1px solid ${t.border};border-radius:999px;padding:10px 20px;white-space:nowrap">${c}</span>`).join('')}
     </div>
   </div>
 </div>`
