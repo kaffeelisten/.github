@@ -6,7 +6,10 @@ holds no application code.
 | Path | What it does |
 |---|---|
 | `profile/README.md` | The organisation's public profile page. |
-| `profile/assets/` | The mark, in a light and a dark variant. |
+| `brand/BRAND.md` | **The brand book** — logo, marks, palettes, type, voice, usage rules. |
+| `brand/logo/` | Logo and mark SVGs, palette variants, and the 512&times;512 avatar. |
+| `brand/social/` | 1280&times;640 social previews, light and dark. |
+| `brand/render.mjs` | Regenerates the PNGs from the SVGs. |
 | `SECURITY.md` | How to report a vulnerability. Applies to every repository. |
 | `CONTRIBUTING.md` | Conventions, the gates, and the decisions that are deliberate. |
 | `CODE_OF_CONDUCT.md` | How we deal with each other. |
@@ -19,11 +22,11 @@ repository's own version always wins, which is the way to make an exception.
 ## Editing it
 
 `profile/README.md` is public and is the first thing anyone sees. Keep it in the project's voice:
-warm, direct, concise, no emojis, and no marketing register.
+warm, direct, concise, no emojis, and no marketing register. **Read [`brand/BRAND.md`](brand/BRAND.md)
+before touching anything visual.**
 
-The mark is a one-line SVG in the brand amber (`#D97706` light, `#F59E0B` dark) with the counter
-line in stone. Referenced by absolute `raw.githubusercontent.com` URL inside a `<picture>` element,
-because GitHub strips inline SVG from Markdown and relative paths do not resolve on the profile
+Images are referenced by absolute `raw.githubusercontent.com` URL inside a `<picture>` element,
+because GitHub strips inline SVG out of Markdown and relative paths do not resolve on the profile
 page.
 
 Changing a template here changes it for every repository at once. Check the forms still render —
