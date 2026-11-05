@@ -1,0 +1,87 @@
+{
+  "_note": "Every surface the brand ships to, and which generated plate it is cut from. 'plate' names a format in prompts.json. 'mode' is 'cover' (fill the frame, trim the rest) or 'fit' (scale the whole composition down and pad with the plate's own paper). Use 'fit' wherever the surface is far thinner than anything the image API can generate - the artwork matters more than filling every pixel. 'focus' is the vertical anchor of a cover crop, 0 top, 1 bottom.",
+  "surfaces": {
+    "github-social": {
+      "w": 1280,
+      "h": 640,
+      "plate": "banner",
+      "format": "jpg",
+      "focus": 0.5,
+      "use": "GitHub repository social preview. Settings, Social preview. Must stay under 1 MB."
+    },
+    "og": {
+      "w": 1200,
+      "h": 630,
+      "plate": "banner",
+      "format": "jpg",
+      "focus": 0.5,
+      "use": "Open Graph and Twitter card. Link previews in chat, Slack, search."
+    },
+    "readme-banner": {
+      "w": 1536,
+      "h": 512,
+      "plate": "wide",
+      "format": "jpg",
+      "focus": 0.5,
+      "use": "The wide strip at the top of a README."
+    },
+    "linkedin-banner": {
+      "w": 1128,
+      "h": 191,
+      "plate": "ultrawide",
+      "format": "jpg",
+      "focus": 0.5,
+      "use": "LinkedIn company page cover. Cut from the ultrawide plate, which is generated with its composition already inside a shallow centre strip, so nothing is squeezed or padded.",
+      "mode": "cover"
+    },
+    "linkedin-post": {
+      "w": 1200,
+      "h": 627,
+      "plate": "banner",
+      "format": "jpg",
+      "focus": 0.5,
+      "use": "LinkedIn link post and single-image post."
+    },
+    "x-header": {
+      "w": 1500,
+      "h": 500,
+      "plate": "wide",
+      "format": "jpg",
+      "focus": 0.5,
+      "use": "X profile header. The centre is safe; the edges are overlaid by the UI."
+    },
+    "instagram-square": {
+      "w": 1080,
+      "h": 1080,
+      "plate": "square",
+      "format": "jpg",
+      "focus": 0.5,
+      "use": "Square social post."
+    },
+    "story": {
+      "w": 1080,
+      "h": 1920,
+      "plate": "portrait",
+      "format": "jpg",
+      "focus": 0.5,
+      "use": "Stories and reels cover. Keep the lettering clear of the top and bottom 250 px."
+    },
+    "email-header": {
+      "w": 1200,
+      "h": 400,
+      "plate": "ultrawide",
+      "format": "jpg",
+      "focus": 0.5,
+      "use": "Newsletter header.",
+      "mode": "cover"
+    },
+    "print-a4-landscape": {
+      "w": 3508,
+      "h": 2480,
+      "plate": "banner",
+      "format": "png",
+      "focus": 0.5,
+      "use": "A4 at 300 dpi, for a poster by the machine or a one-pager cover. Upscaled from the plate, so check it at size before printing."
+    }
+  }
+}

@@ -1,4 +1,4 @@
-<!-- banner: new brand kit in progress -->
+<img src="https://raw.githubusercontent.com/kaffeelisten/.github/main/brand/assets/readme-banner.jpg" alt="Kaffeelisten — die Kaffeeliste, ohne Papier" width="860">
 
 # Kaffeelisten
 

@@ -1,0 +1,3 @@
+# Generation rounds are scratch: candidates, not assets.
+# The chosen plate is copied to plates/ and the surfaces are cut from there.
+out/
