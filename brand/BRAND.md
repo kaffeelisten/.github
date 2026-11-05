@@ -29,6 +29,16 @@ half and the amber still identifies you.
 
 Beneath it, smaller and lighter: *Die Kaffeeliste – ohne Papier.*
 
+**On tall or narrow surfaces it stacks**, left-aligned, tight leading:
+
+```
+Kaffee      ← near-black
+listen      ← amber
+```
+
+Two lines, still one word. Use the stacked form wherever a single line would have to shrink to
+fit — stories, portrait posts, anything roughly 1:1 or taller.
+
 **Never** break the word with a space or a hyphen, recolour either half, set it in a light weight,
 or letterspace it loosely. It is one word, heavy, tight.
 
@@ -110,8 +120,18 @@ export OPENAI_API_KEY=...          # dotPrivate/.env
 python -I tools/gen_texture.py <format> [theme] [n] [round]
 ```
 
-Formats are `banner`, `wide`, `ultrawide`, `square`, `portrait` — each one a composition brief,
-not just a size. Candidates land in `out/`, metadata already stripped.
+Formats are composition briefs, not just sizes. The API only returns 1:1, 3:2 and 2:3, so each
+one describes **where in the frame the composition must sit** for its family of crops:
+
+| Format | Brief | Feeds |
+|---|---|---|
+| `banner` | Calm left half, art in the right half | social preview, og, LinkedIn post, print |
+| `wide3` | Everything inside the **middle half**, edge to edge | the 3:1 family: README, X header, email |
+| `ultrawide` | Everything inside the **middle quarter** | LinkedIn cover, 5.9:1 |
+| `square` | Lettering across the middle, art around it | square posts |
+| `portrait` | **Stacked** lockup, side margins kept clear | stories, 9:16 |
+
+Candidates land in `out/`, metadata already stripped.
 
 **2 · Choose.** Look at the candidates and copy the one you want to `plates/<format>.png`.
 Nothing picks for you, and that is deliberate.
@@ -132,9 +152,18 @@ the steam. Fitting it instead, with paper margins, shrank the art to a stamp in 
 answer was neither: a dedicated **`ultrawide`** format whose brief puts the whole composition
 inside the middle quarter of the frame, so the crop is full-bleed and nothing is squeezed.
 
-**The rule: when a surface does not fit, change the generation brief, not the crop.** `fit` mode
-exists in `surfaces.py` for emergencies, and the result is always worse than a plate generated for
-the shape.
+**The rule: when a surface does not fit, change the generation brief, not the crop.** That is why
+`wide3` and `ultrawide` exist as separate formats rather than as different crops of one plate.
+
+`surfaces.py` has two modes. **`cover`** fills the frame and trims the rest; it is the default.
+**`fit`** scales the whole composition down and pads with the plate's own paper — only acceptable
+when the surface ratio is *close* to the plate's, where the padding reads as a deliberate margin.
+At an extreme gap it shrinks the art to a stamp in a dead field, which is worse than any crop.
+
+The same lesson applied vertically: a 9:16 story cut from a full-width portrait plate clipped the
+wordmark at both edges. The fix was not a different crop but a brief that keeps the lettering
+inside the central three quarters of the width, plus the stacked lockup so it does not need the
+full width in the first place.
 
 ---
 
@@ -157,6 +186,16 @@ Every one is cut from a plate by `surfaces.py`, listed with its use in `tools/su
 
 JPEG wherever a platform caps the file size or the asset is a photograph-like texture; PNG for
 print. `surfaces.py` steps the JPEG quality down until it is under 1 MB.
+
+**Proof the round before shipping it:**
+
+```bash
+cd <product repo> && cp <brand>/tools/contact_sheet.mjs ./sheet.tmp.mjs
+CHROMIUM_PATH=... node ./sheet.tmp.mjs <brand> [theme] && rm ./sheet.tmp.mjs
+```
+
+It writes `contact-sheet.png` — every surface at its real ratio with its size and its use, which
+is how a bad crop gets caught before it reaches a profile page.
 
 ## Themed variants
 

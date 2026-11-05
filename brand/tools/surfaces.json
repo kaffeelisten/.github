@@ -1,5 +1,5 @@
 {
-  "_note": "Every surface the brand ships to, and which generated plate it is cut from. 'plate' names a format in prompts.json. 'mode' is 'cover' (fill the frame, trim the rest) or 'fit' (scale the whole composition down and pad with the plate's own paper). Use 'fit' wherever the surface is far thinner than anything the image API can generate - the artwork matters more than filling every pixel. 'focus' is the vertical anchor of a cover crop, 0 top, 1 bottom.",
+  "_note": "Every surface the brand ships to, and which generated plate it is cut from. 'plate' names a format in prompts.json. 'mode' is 'cover' (fill the frame, trim the rest) or 'fit' (scale the whole composition down and pad with the plate's own paper). Use 'cover' by default. Use 'fit' only when the surface ratio is CLOSE to the plate's, where the padding reads as a margin - at an extreme gap it shrinks the art to a stamp, and the answer there is a new generation brief, not a different crop. 'focus' is the vertical anchor of a cover crop, 0 top, 1 bottom.",
   "surfaces": {
     "github-social": {
       "w": 1280,
@@ -20,10 +20,11 @@
     "readme-banner": {
       "w": 1536,
       "h": 512,
-      "plate": "wide",
+      "plate": "wide3",
       "format": "jpg",
       "focus": 0.5,
-      "use": "The wide strip at the top of a README."
+      "use": "The wide strip at the top of a README.",
+      "mode": "cover"
     },
     "linkedin-banner": {
       "w": 1128,
@@ -45,10 +46,11 @@
     "x-header": {
       "w": 1500,
       "h": 500,
-      "plate": "wide",
+      "plate": "wide3",
       "format": "jpg",
       "focus": 0.5,
-      "use": "X profile header. The centre is safe; the edges are overlaid by the UI."
+      "use": "X profile header. The centre is safe; the edges are overlaid by the UI.",
+      "mode": "cover"
     },
     "instagram-square": {
       "w": 1080,
@@ -64,12 +66,13 @@
       "plate": "portrait",
       "format": "jpg",
       "focus": 0.5,
-      "use": "Stories and reels cover. Keep the lettering clear of the top and bottom 250 px."
+      "use": "Stories and reels cover. Cut from the stacked-lockup portrait plate, which is briefed with side margins so the 9:16 crop never clips the name.",
+      "mode": "cover"
     },
     "email-header": {
       "w": 1200,
       "h": 400,
-      "plate": "ultrawide",
+      "plate": "wide3",
       "format": "jpg",
       "focus": 0.5,
       "use": "Newsletter header.",

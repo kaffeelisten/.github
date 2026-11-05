@@ -36,8 +36,10 @@ def build_prompt(fmt: str, theme: str) -> str:
     f = CFG["formats"][fmt]
     parts = []
     # Lettering leads: a long "no text" tail at the end suppresses it entirely.
-    if CFG.get("lettering") and f.get("lettered", True):
-        parts.append(CFG["lettering"])
+    if f.get("lettered", True):
+        key = "lettering_stacked" if f.get("stacked") else "lettering"
+        if CFG.get(key):
+            parts.append(CFG[key])
     parts += [CFG["base"], f["composition"], CFG["palette_rule"]]
     if CFG["themes"].get(theme):
         parts.append(CFG["themes"][theme])

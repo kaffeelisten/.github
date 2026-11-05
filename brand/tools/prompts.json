@@ -24,8 +24,9 @@
     },
     "portrait": {
       "size": "1024x1536",
-      "composition": "Tall composition. The lettering sits in the upper half with clear space above and below it; the paper planes, the cut-paper cup and the printed ring occupy the lower half. Keep the top and bottom edges calm, they get cropped.",
-      "lettered": true
+      "composition": "Tall composition for a 9:16 story. The stacked two-line name sits in the upper third, well inside the width with clear paper margins down both sides. The paper planes, the cut-paper cup and the printed ring fill the lower half. Keep the very top and the very bottom calm.",
+      "lettered": true,
+      "stacked": true
     },
     "wide": {
       "size": "1536x1024",
@@ -36,6 +37,11 @@
       "size": "1536x1024",
       "lettered": true,
       "composition": "Everything - the lettering and every paper element - must sit inside a very SHALLOW HORIZONTAL STRIP across the exact vertical centre, occupying only the middle QUARTER of the frame height. The lettering is on the left of that strip and the paper planes, the cut-paper cup and the printed ring are on the right of it, all scaled to fit within that shallow strip. The entire top three eighths and the entire bottom three eighths of the frame are plain empty paper with absolutely nothing in them, because they are cropped away. Set the lettering smaller than usual so it fits the shallow strip."
+    },
+    "wide3": {
+      "size": "1536x1024",
+      "lettered": true,
+      "composition": "Everything - the lettering and every paper element - fills a HORIZONTAL BAND occupying the middle HALF of the frame height, edge to edge across the full width, with no empty gaps inside it. The lettering is large on the left of that band and the paper planes, the cut-paper cup and the printed ring fill the right of it. Only the top quarter and the bottom quarter are plain empty paper, because they are cropped away."
     }
   },
   "themes": {
@@ -50,5 +56,6 @@
     "tagline": "Die Kaffeeliste - ohne Papier.",
     "url": "kaffeelisten.de"
   },
-  "lettering": "THIS IS A TYPOGRAPHIC POSTER. The single word \"Kaffeelisten\" is the main subject, large and clearly readable in the calm area. Spell it EXACTLY K-a-f-f-e-e-l-i-s-t-e-n as one unbroken word with no space and no hyphen. SET IT IN TWO COLOURS WITHIN THE ONE WORD: the first six letters \"Kaffee\" in the deep warm near-black ink, and the last six letters \"listen\" in the saturated warm amber. The colour change happens mid-word with no gap. A clean modern geometric sans-serif, heavy weight, tight letter-spacing, printed flat on the paper so it carries the paper's grain. Directly beneath it, much smaller and lighter in near-black, the line \"Die Kaffeeliste - ohne Papier.\" Letterforms crisp, even and correctly formed."
+  "lettering": "THIS IS A TYPOGRAPHIC POSTER. The single word \"Kaffeelisten\" is the main subject, large and clearly readable in the calm area. Spell it EXACTLY K-a-f-f-e-e-l-i-s-t-e-n as one unbroken word with no space and no hyphen. SET IT IN TWO COLOURS WITHIN THE ONE WORD: the first six letters \"Kaffee\" in the deep warm near-black ink, and the last six letters \"listen\" in the saturated warm amber. The colour change happens mid-word with no gap. A clean modern geometric sans-serif, heavy weight, tight letter-spacing, printed flat on the paper so it carries the paper's grain. Directly beneath it, much smaller and lighter in near-black, the line \"Die Kaffeeliste - ohne Papier.\" Letterforms crisp, even and correctly formed.",
+  "lettering_stacked": "THIS IS A TYPOGRAPHIC POSTER. The name is set on TWO LINES, stacked and left-aligned, reading \"Kaffee\" on the first line and \"listen\" on the second line - together they spell the single word Kaffeelisten. \"Kaffee\" is in the deep warm near-black ink and \"listen\" directly beneath it is in the saturated warm amber. Tight line spacing so the two lines read as one block. A clean modern geometric sans-serif, heavy weight, tight letter-spacing, printed flat on the paper so it carries the paper's grain. Beneath the block, much smaller and lighter in near-black, the line \"Die Kaffeeliste - ohne Papier.\" Letterforms crisp, even and correctly formed. Spell both words exactly: K-a-f-f-e-e and l-i-s-t-e-n."
 }
