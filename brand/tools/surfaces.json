@@ -23,7 +23,7 @@
       "plate": "wide3",
       "format": "jpg",
       "focus": 0.5,
-      "use": "The wide strip at the top of a README.",
+      "use": "The wide strip at the top of a README. Its own panoramic composition, layered edge to edge.",
       "mode": "cover"
     },
     "linkedin-banner": {
@@ -32,7 +32,7 @@
       "plate": "ultrawide",
       "format": "jpg",
       "focus": 0.5,
-      "use": "LinkedIn company page cover. Cut from the ultrawide plate, which is generated with its composition already inside a shallow centre strip, so nothing is squeezed or padded.",
+      "use": "LinkedIn company page cover. Cut from the ultrawide frieze, whose elements march across a shallow centre strip so a 5.9:1 crop stays dense.",
       "mode": "cover"
     },
     "linkedin-post": {
@@ -46,10 +46,10 @@
     "x-header": {
       "w": 1500,
       "h": 500,
-      "plate": "wide3",
+      "plate": "xheader",
       "format": "jpg",
       "focus": 0.5,
-      "use": "X profile header. The centre is safe; the edges are overlaid by the UI.",
+      "use": "X profile header. Its own bold composition: one large amber field, the cup reversed out, high contrast. Centre is safe, edges are overlaid by the UI.",
       "mode": "cover"
     },
     "instagram-square": {
@@ -58,7 +58,7 @@
       "plate": "square",
       "format": "jpg",
       "focus": 0.5,
-      "use": "Square social post."
+      "use": "Square social post. Centred poster with the stacked two-line lockup and the cup as hero."
     },
     "story": {
       "w": 1080,
@@ -66,16 +66,16 @@
       "plate": "portrait",
       "format": "jpg",
       "focus": 0.5,
-      "use": "Stories and reels cover. Cut from the stacked-lockup portrait plate, which is briefed with side margins so the 9:16 crop never clips the name.",
+      "use": "Stories and reels cover. Cut from the portrait stack, briefed with side margins so the 9:16 crop never clips the name.",
       "mode": "cover"
     },
     "email-header": {
       "w": 1200,
       "h": 400,
-      "plate": "wide3",
+      "plate": "emailheader",
       "format": "jpg",
       "focus": 0.5,
-      "use": "Newsletter header.",
+      "use": "Newsletter header. Its own editorial composition: type-led, one amber diagonal, a stack of notes.",
       "mode": "cover"
     },
     "print-a4-landscape": {

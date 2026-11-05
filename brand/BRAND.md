@@ -123,13 +123,20 @@ python -I tools/gen_texture.py <format> [theme] [n] [round]
 Formats are composition briefs, not just sizes. The API only returns 1:1, 3:2 and 2:3, so each
 one describes **where in the frame the composition must sit** for its family of crops:
 
-| Format | Brief | Feeds |
+| Format | Its own composition | Feeds |
 |---|---|---|
-| `banner` | Calm left half, art in the right half | social preview, og, LinkedIn post, print |
-| `wide3` | Everything inside the **middle half**, edge to edge | the 3:1 family: README, X header, email |
-| `ultrawide` | Everything inside the **middle quarter** | LinkedIn cover, 5.9:1 |
-| `square` | Lettering across the middle, art around it | square posts |
-| `portrait` | **Stacked** lockup, side margins kept clear | stories, 9:16 |
+| `banner` | Torn vertical edge, calm paper left, dense amber field right | social preview, og, LinkedIn post, print |
+| `wide3` | Panoramic counter, layered bands running edge to edge | README strip |
+| `xheader` | One huge amber field, cup reversed out, high contrast | X header |
+| `emailheader` | Type-led and editorial, one amber diagonal, a stack of notes | newsletter |
+| `ultrawide` | A frieze: elements marching across a shallow centre strip | LinkedIn cover, 5.9:1 |
+| `square` | Centred poster, stacked lockup, cup as hero | square posts |
+| `portrait` | A tall stack read top to bottom, side margins kept clear | stories, 9:16 |
+
+**Each one is a different picture, not the same picture resized.** That is the difference between
+a kit that feels designed and one that feels templated — and it is the thing that went wrong the
+first time, when every format was briefed toward empty margins and arrived sparse and weak.
+Density, layering and balance are what make these read as branding.
 
 Candidates land in `out/`, metadata already stripped.
 

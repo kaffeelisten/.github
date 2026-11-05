@@ -1,6 +1,6 @@
 {
   "model": "gpt-image-2.5-sunburst",
-  "_note": "The reusable prompt system. The model generates the whole poster, lettering included, so the type sits IN the paper world with its texture rather than being pasted flat on top. The two-tone split is part of the brief: 'Kaffee' in near-black, 'listen' in amber. Add a theme here to get a seasonal set.",
+  "_note": "The reusable prompt system. Each entry in 'formats' is a DISTINCT composition with its own creative direction, not one template resized - that is what separates a strong asset from a weak one. The model generates the whole poster, lettering included, so the type sits in the paper world and carries its grain. Add a theme to get a seasonal set; nothing else needs editing.",
   "palette": {
     "paper": "#FAFAF9",
     "ink": "#1C1917",
@@ -8,40 +8,46 @@
     "amber_light": "#F59E0B",
     "stone": "#57534E"
   },
-  "base": "A flat graphic cut-paper collage, designed as a poster — not a photograph. Shapes are cut and torn from textured paper and laid flat: clean geometric planes, hard origami fold lines shown as straight edges between two slightly different tones, one or two deliberately torn edges with a soft deckled fibre lip, a small square note, and a coffee ring rendered as a simple flat printed ring, slightly off-register. Visible paper grain inside every shape. Screen-printed risograph feel with limited flat inks, crisp vector-like edges, even flat lighting.",
+  "base": "Flat graphic cut-paper collage, designed as a poster, NOT a photograph. Every element is cut or torn from textured paper and laid flat: clean geometric planes, hard fold lines shown as straight edges between two tones, deliberately torn edges with a soft deckled fibre lip, visible paper grain inside every shape, crisp cut edges. Screen-printed risograph feel with limited flat inks. The composition is DENSE and LAYERED, with real depth from overlapping planes and a soft contact shadow where one sheet sits on another - rich and balanced, never sparse, never a large empty field.",
   "palette_rule": "Strictly three flat inks: warm off-white paper as the ground, deep warm near-black, and exactly one saturated warm amber as the single accent, used boldly on large shapes. No other hue anywhere. No blue, no green, no pink, no teal, no pastel yellow.",
   "negative": "NOT a photograph: no photographic realism, no depth of field, no studio lighting, no cast shadows, no 3D rendering, no origami cranes or animals, no desk scene, no props, no plants, no leaves, no flowers, no hands, no people. Apart from those two lines of type, add no other words, no numbers, no labels, no signature, no watermark, no logo. Do not misspell anything. No gradients, no vignette, no sepia.",
   "formats": {
     "banner": {
       "size": "1536x1024",
-      "composition": "Wide horizontal composition. Keep the LEFT HALF calm and largely empty for the lettering; put the paper planes, the cut-paper cup and the printed ring in the right half.",
+      "composition": "A torn vertical edge splits the frame: calm paper on the left carrying the lettering, and on the right a dense amber field with the cup drawn as a white cut-paper outline, a small cut-paper note bearing the cup mark, a printed coffee ring, scattered beans and layered kraft planes receding into a dark plane at the corner. 2:1 and 1.9:1 crops are taken from the vertical centre, so keep the very top and bottom edges quieter than the middle.",
       "lettered": true
     },
     "square": {
       "size": "1024x1024",
-      "composition": "Square composition. The lettering sits across the middle; the paper planes, the cut-paper cup and the printed ring fill the upper and lower thirds without crowding it.",
-      "lettered": true
-    },
-    "portrait": {
-      "size": "1024x1536",
-      "composition": "Tall composition for a 9:16 story. The stacked two-line name sits in the upper third, well inside the width with clear paper margins down both sides. The paper planes, the cut-paper cup and the printed ring fill the lower half. Keep the very top and the very bottom calm.",
+      "composition": "A centred poster: the cup is the hero, large, drawn as a white cut-paper outline on a bold amber plane filling the lower two thirds, with layered kraft and dark planes radiating out behind it and a printed ring overlapping the lower edge. The stacked two-line name sits in the upper third on clean paper. Balanced, iconic, dense. Used at 1:1 with no crop.",
       "lettered": true,
       "stacked": true
     },
-    "wide": {
-      "size": "1536x1024",
+    "portrait": {
+      "size": "1024x1536",
+      "composition": "A tall stack: the stacked two-line name on paper at the top, a wide torn amber band across the middle carrying the cup as a large white cut-paper outline, and beneath it layered kraft and dark planes with a printed ring and a small note overlapping them. The eye travels straight down, dense all the way to the bottom edge. A 9:16 crop trims the sides, so keep the lettering and the focal elements inside the central three quarters of the width.",
       "lettered": true,
-      "composition": "Everything — the lettering and every paper element — must sit inside a NARROW HORIZONTAL BAND across the vertical centre, roughly the middle third of the frame. The lettering is on the left of that band, the paper planes and the cut-paper cup on the right of it. The top third and the bottom third are plain empty paper with nothing in them at all, because they will be cropped away."
+      "stacked": true
     },
     "ultrawide": {
       "size": "1536x1024",
       "lettered": true,
-      "composition": "Everything - the lettering and every paper element - must sit inside a very SHALLOW HORIZONTAL STRIP across the exact vertical centre, occupying only the middle QUARTER of the frame height. The lettering is on the left of that strip and the paper planes, the cut-paper cup and the printed ring are on the right of it, all scaled to fit within that shallow strip. The entire top three eighths and the entire bottom three eighths of the frame are plain empty paper with absolutely nothing in them, because they are cropped away. Set the lettering smaller than usual so it fits the shallow strip."
+      "composition": "A frieze: a continuous horizontal rhythm of cut-paper elements marching across the strip - the lettering at the left, then a torn amber plane, the cup as a white outline, a printed ring, a small note, a trio of beans, and a dark plane closing the right end. Each element overlaps its neighbour so the strip reads as one dense band with no gaps. A 5.9:1 crop is taken from a shallow strip at the exact vertical centre, so EVERYTHING must sit inside the middle quarter of the height, lettering included and scaled down to fit it."
     },
     "wide3": {
       "size": "1536x1024",
       "lettered": true,
-      "composition": "Everything - the lettering and every paper element - fills a HORIZONTAL BAND occupying the middle HALF of the frame height, edge to edge across the full width, with no empty gaps inside it. The lettering is large on the left of that band and the paper planes, the cut-paper cup and the printed ring fill the right of it. Only the top quarter and the bottom quarter are plain empty paper, because they are cropped away."
+      "composition": "A long panoramic counter: layered paper planes running the FULL width in an unbroken horizontal rhythm, a torn amber sweep crossing behind, the cup as a large white cut-paper outline just right of centre, a printed ring and scattered beans to its right, a dark angular plane anchoring the far right. The lettering sits on the left, over paper, with the layers continuing behind it. A 3:1 crop is taken from the middle half of the height, so every part of that centre band must be occupied - no empty stretches anywhere along it."
+    },
+    "xheader": {
+      "size": "1536x1024",
+      "lettered": true,
+      "composition": "Bold and graphic, the opposite of a panorama: a huge amber field occupies the right two thirds as a single confident plane, the cup reversed out of it as a clean white cut-paper outline at generous scale, a dark angular plane cutting in from the lower left, and a small printed ring overlapping the join. The lettering sits on the remaining paper at the left. Few elements, large, high contrast. A 3:1 crop is taken from the middle half of the height."
+    },
+    "emailheader": {
+      "size": "1536x1024",
+      "lettered": true,
+      "composition": "Editorial and typographic: mostly warm paper, with ONE strong amber torn diagonal running from the lower left to the upper right behind the type, a small stack of cut-paper notes with the cup mark on the top one, and a printed ring sitting half on the paper and half on the amber. The lettering is the hero and sits large across the left two thirds. Quiet and confident, but still layered. A 3:1 crop is taken from the middle half of the height."
     }
   },
   "themes": {
