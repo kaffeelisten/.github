@@ -8,7 +8,7 @@ holds no application code.
 | `profile/README.md` | The organisation's public profile page. |
 | `brand/BRAND.md` | **The brand book** — wordmark, logo, palette, the visual world and the system that generates it. |
 | `brand/logo/` | Logo and mark SVGs, palette variants, and the 512&times;512 avatar. |
-| `brand/plates/` | The approved plate behind each surface, drawn at that surface's own size, plus kept plates nothing ships from — `readme-filter.png` is the fluted fan that was the README banner until 6 November 2026. |
+| `brand/plates/` | The approved plate behind each surface, drawn at that surface's own size, plus kept plates nothing ships from — `readme-filter.png`, the fluted fan that was the README banner until 6 November 2026, and `wide.png`. Both are kept on purpose; nothing cutting from a plate is not a reason to drop it. |
 | `brand/assets/` | Every shipped surface: social previews, banners, square, story, print. |
 | `SECURITY.md` | How to report a vulnerability. Applies to every repository. |
 | `CONTRIBUTING.md` | Conventions, the gates, and the decisions that are deliberate. |
