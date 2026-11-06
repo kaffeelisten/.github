@@ -59,6 +59,8 @@ figures and identifiers.
 | `assets/instagram-square.jpg` | 1080×1080. Square post. |
 | `assets/linkedin-banner.jpg` | 1128×191. LinkedIn company cover, cut from a 1536×512 plate briefed for its centre band. |
 | `assets/email-header.jpg` | 1200×400. Email header. |
+| `assets/x-header.jpg` | 1500×500. X / Twitter header; the bottom-left is kept calm for the profile picture. |
+| `assets/story.jpg` | 1080×1920. Story; top and bottom kept clear for the platform's UI. |
 
 Every file is rebuilt from pixels only — no EXIF, no XMP, no C2PA chunk.
 
