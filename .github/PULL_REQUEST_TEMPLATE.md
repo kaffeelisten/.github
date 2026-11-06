@@ -4,6 +4,15 @@
 
 Closes #
 
+<!--
+Link the issue this pull request completes: `Closes #12`, or `Closes kaffeelisten/playbook#3` for an
+issue in another repository. A stack layer or a partial step says `Refs #12` instead. CI fails without
+a link; the `no-issue` label exempts a trivial fix. The author is assigned automatically, the `type:*`
+label comes from the title and the milestone from the issue.
+
+Inside a stack, title each layer `[n/N] type(scope): summary` and list the stack here, bottom first.
+-->
+
 ## How it was verified
 
 <!-- What you actually ran or clicked. "CI is green" is not verification on its own. -->
@@ -26,7 +35,7 @@ Closes #
 - [ ] `CHANGELOG.md` updated under `[Unreleased]` — or not applicable, nothing user-visible
 - [ ] No secret, PIN, key or token in the diff, the description or a screenshot
 - [ ] No real member names in fixtures, tests or screenshots
-- [ ] Branch name and commits follow the conventions in `CONTRIBUTING.md`
+- [ ] Branch name, commits and title follow the conventions in `CONTRIBUTING.md`
 
 ## Anything a reviewer should look at first
 

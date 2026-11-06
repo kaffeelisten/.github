@@ -1,0 +1,34 @@
+name: Epic
+description: One phase of the build order, with its stories and tasks as sub-issues (maintainers)
+title: "[P?] "
+labels: ["type:epic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Epics live in `kaffeelisten/.github`, one per phase, titled `[P2] …`. Their children can sit in
+        any repository of the organisation and are attached as native **sub-issues**. An epic is
+        never closed automatically: when its last sub-issue closes it gets `ready-for-acceptance`,
+        and a maintainer checks the outcome before closing it.
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What is true when this phase is done.
+    validations:
+      required: true
+
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Done when
+      placeholder: |
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Not in this phase

@@ -1,0 +1,13 @@
+# Path-based area labels for pull requests (actions/labeler v5 syntax).
+area:org:
+  - changed-files:
+      - any-glob-to-any-file: ['profile/**', 'CODE_OF_CONDUCT.md', 'SECURITY.md', 'CONTRIBUTING.md', '.github/ISSUE_TEMPLATE/**', '.github/PULL_REQUEST_TEMPLATE.md']
+area:brand:
+  - changed-files:
+      - any-glob-to-any-file: ['brand/**']
+area:delivery:
+  - changed-files:
+      - any-glob-to-any-file: ['.github/workflows/**', '.github/labeler.yml', 'scripts/**', 'workflow-templates/**']
+area:docs:
+  - changed-files:
+      - any-glob-to-any-file: ['docs/**', '*.md']

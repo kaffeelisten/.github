@@ -1,0 +1,135 @@
+name: Conventions
+
+# The organisation's shared conventions, called by a short `conventions.yml` in every repository
+# (template: workflow-templates/conventions.yml). One entry point dispatches on the caller's event:
+#
+#   pull request   PR conventions: title, type label, linked issue, assignee, milestone; area labels
+#   /take, /drop   self-assign or unassign an issue
+#   issue closed   sub-issue roll-up: an epic whose children are all closed gets ready-for-acceptance
+#   any of these   board sync, when the repository has a PROJECTS_TOKEN secret
+#
+# Under pull_request_target it checks out the caller's default branch and this repository's main,
+# never the pull request's head, so no code from a pull request runs with these permissions.
+
+on:
+  workflow_call:
+    secrets:
+      PROJECTS_TOKEN:
+        required: false
+
+jobs:
+  pull-request:
+    name: PR conventions
+    if: github.event_name == 'pull_request_target' && github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    concurrency:
+      group: pr-conventions-${{ github.repository }}-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: kaffeelisten/.github
+          ref: main
+          path: .org
+          persist-credentials: false
+      - name: Area labels from changed paths
+        if: hashFiles('.github/labeler.yml') != ''
+        uses: actions/labeler@v5
+        with:
+          configuration-path: .github/labeler.yml
+          sync-labels: false
+      - name: Title, type label, issue link, assignee, milestone
+        uses: actions/github-script@v8
+        with:
+          script: |
+            await require('./.org/scripts/conventions/pr-conventions.cjs')({ github, context, core });
+
+  issue-command:
+    name: Issue command
+    if: >-
+      github.event_name == 'issue_comment' && !github.event.issue.pull_request &&
+      (startsWith(github.event.comment.body, '/take') || startsWith(github.event.comment.body, '/drop') ||
+       startsWith(github.event.comment.body, '/assign') || startsWith(github.event.comment.body, '/unassign'))
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: kaffeelisten/.github
+          ref: main
+          path: .org
+          persist-credentials: false
+      - uses: actions/github-script@v8
+        with:
+          script: |
+            await require('./.org/scripts/conventions/issue-commands.cjs')({ github, context, core });
+
+  roll-up:
+    name: Sub-issue roll-up
+    if: >-
+      (github.event_name == 'issues' && (github.event.action == 'closed' || github.event.action == 'reopened')) ||
+      (github.repository == 'kaffeelisten/.github' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'))
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    concurrency:
+      group: roll-up-${{ github.repository }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: kaffeelisten/.github
+          ref: main
+          path: .org
+          persist-credentials: false
+      - uses: actions/github-script@v8
+        with:
+          script: |
+            const rollup = require('./.org/scripts/conventions/sub-issue-rollup.cjs');
+            if (context.eventName === 'issues') await rollup({ github, context, core });
+            else await rollup.sweep({ github, context, core });
+
+  board:
+    name: Board sync
+    if: >-
+      github.event_name == 'pull_request_target' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issues' && contains(fromJSON('["opened","reopened","closed","assigned","labeled"]'), github.event.action))
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: read
+      pull-requests: read
+    concurrency:
+      group: board-${{ github.repository }}
+      cancel-in-progress: false
+    env:
+      PROJECTS_TOKEN: ${{ secrets.PROJECTS_TOKEN }}
+    steps:
+      - name: Skip without a project token
+        if: env.PROJECTS_TOKEN == ''
+        run: echo "::notice::No PROJECTS_TOKEN secret in this repository, so the board is not synced from here. See CONTRIBUTING.md, section 'The board'."
+      - uses: actions/checkout@v4
+        if: env.PROJECTS_TOKEN != ''
+        with:
+          repository: kaffeelisten/.github
+          ref: main
+          path: .org
+          persist-credentials: false
+      - uses: actions/github-script@v8
+        if: env.PROJECTS_TOKEN != ''
+        with:
+          github-token: ${{ env.PROJECTS_TOKEN }}
+          retries: 3
+          script: |
+            await require('./.org/scripts/conventions/project-sync.cjs')({ github, context, core });

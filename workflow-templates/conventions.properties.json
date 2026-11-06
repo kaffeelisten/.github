@@ -1,0 +1,6 @@
+{
+  "name": "Kaffeelisten conventions",
+  "description": "PR title, type label, linked issue, assignee and milestone checks, /take and /drop, sub-issue roll-up and board sync, shared from kaffeelisten/.github.",
+  "iconName": "octicon checklist",
+  "categories": ["Automation"]
+}

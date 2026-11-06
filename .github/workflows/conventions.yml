@@ -1,0 +1,25 @@
+name: Conventions
+
+# This repository's own caller of the shared conventions in org-conventions.yml. Every other
+# repository calls the same workflow by its full path; see workflow-templates/conventions.yml.
+on:
+  pull_request_target:
+    types: [opened, edited, reopened, synchronize, ready_for_review, converted_to_draft, labeled, unlabeled, closed]
+  issues:
+    types: [opened, reopened, closed, assigned, labeled]
+  issue_comment:
+    types: [created]
+  schedule:
+    - cron: '23 5 * * *'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  conventions:
+    uses: ./.github/workflows/org-conventions.yml
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    secrets: inherit

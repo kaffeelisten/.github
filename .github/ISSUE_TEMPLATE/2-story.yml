@@ -1,6 +1,6 @@
-name: Feature request
-description: Propose something the product should do
-labels: ["enhancement"]
+name: Story (feature request)
+description: Something a user should be able to do that they cannot today
+labels: ["type:story", "needs-triage"]
 body:
   - type: markdown
     attributes:
