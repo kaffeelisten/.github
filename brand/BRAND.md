@@ -55,7 +55,8 @@ figures and identifiers.
 | `assets/github-social.jpg` | 1280×640. Repository social preview, under GitHub's 1 MB cap. |
 | `assets/og.jpg` | 1200×630. Open Graph and link previews. |
 | `assets/linkedin-post.jpg` | 1200×627. |
-| `assets/print-a4-landscape.png` | 3508×2480. A4 at 300 dpi. |
+| `assets/print-a4-portrait.png` | 2480×3508. A4 portrait at 300 dpi – the poster beside the machine. |
+| `assets/instagram-square.jpg` | 1080×1080. Square post. |
 
 Every file is rebuilt from pixels only — no EXIF, no XMP, no C2PA chunk.
 
