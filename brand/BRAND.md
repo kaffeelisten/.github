@@ -24,7 +24,9 @@ set it light, or letterspace it loosely.
 | `logo/logo-itc1.svg`, `-wald.svg`, `-imperium.svg` | Palette variants. |
 | `logo/logo-mono.svg` | Single colour, for one-colour printing. |
 | `logo/mark-cappuccino.svg`, `mark-deathstar.svg` | The marks alone, `currentColor`. |
-| `logo/avatar-512.png` | 512×512 raster. The organisation avatar. |
+| `logo/avatar-1024.png`, `-512.png` | The organisation avatar: the mark on brand paper. Upload the 1024; the 512 is for anywhere that wants a smaller file. |
+
+The avatar is **not** the logo scaled down. It is its own artwork: a torn-paper cup, kept as `plates/avatar-cup.png` in the playbook and framed square with the deckled edge whole. It is **transparent**, so it sits on either GitHub theme, and it carries no wordmark and no tagline. Reframe it from the plate; do not scale the logo into the slot.
 
 `rx="40"` on a 200×200 viewBox — a 20% corner radius, kept at every size. The mark stays white on
 the square in every palette.
