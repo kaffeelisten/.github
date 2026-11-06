@@ -1,0 +1,19 @@
+{
+  "owner": "kaffeelisten",
+  "projectNumber": 1,
+  "projectUrl": "https://github.com/orgs/kaffeelisten/projects/1",
+  "projectId": "PVT_kwDOFQiz884BqcH-",
+  "statusFieldId": "PVTSSF_lADOFQiz884BqcH-zhozQBk",
+  "statusOptions": {
+    "Backlog": "68718046",
+    "Ready": "9e3539ed",
+    "In progress": "03b0ee27",
+    "In review": "8785016f",
+    "Blocked": "c047cf6b",
+    "Done": "8cfa78d9"
+  },
+  "startDateFieldId": "PVTF_lADOFQiz884BqcH-zhozQFQ",
+  "completedDateFieldId": "PVTF_lADOFQiz884BqcH-zhozQGY",
+  "epicRepository": "kaffeelisten/.github",
+  "contributing": "https://github.com/kaffeelisten/.github/blob/main/CONTRIBUTING.md"
+}

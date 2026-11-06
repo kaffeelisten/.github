@@ -1,0 +1,27 @@
+name: Spike
+description: A time-boxed question to answer before committing to an approach
+labels: ["type:spike", "needs-triage"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: The question
+      description: What we need to know, and which decision waits on the answer.
+    validations:
+      required: true
+
+  - type: input
+    id: timebox
+    attributes:
+      label: Time box
+      placeholder: Half a day
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: What the spike leaves behind. Usually a short write-up and a recommendation, not production code.
+    validations:
+      required: true

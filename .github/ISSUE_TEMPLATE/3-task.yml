@@ -1,0 +1,41 @@
+name: Task
+description: A piece of work with a clear finish line that is not a user-facing feature
+labels: ["type:task", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Chores, docs, CI, refactors, operations and playbook work. One task is one pull request.
+        **Never include real people's names, a PIN, a key or a token.**
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: What needs doing
+      description: The outcome, in a sentence or two.
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: Checkable criteria. Someone else should be able to tell whether they are met.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: input
+    id: epic
+    attributes:
+      label: Epic
+      description: The phase epic this belongs to, if any.
+      placeholder: kaffeelisten/.github#2
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Links, dependencies, anything a newcomer would need.
