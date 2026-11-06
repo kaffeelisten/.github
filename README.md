@@ -8,7 +8,7 @@ holds no application code.
 | `profile/README.md` | The organisation's public profile page. |
 | `brand/BRAND.md` | **The brand book** — wordmark, logo, palette, the visual world and the system that generates it. |
 | `brand/logo/` | Logo and mark SVGs, palette variants, and the 512&times;512 avatar. |
-| `brand/plates/` | The chosen generated plate per format. |
+| `brand/plates/` | The chosen generated plate per format, and kept plates no surface cuts from — `readme-filter.png` is the fluted fan that was the README banner until 6 November 2026. |
 | `brand/assets/` | Every shipped surface: social previews, banners, square, story, print. |
 | `brand/tools/` | `prompts.json`, `gen_texture.py`, `surfaces.json`, `surfaces.py`. |
 | `SECURITY.md` | How to report a vulnerability. Applies to every repository. |
