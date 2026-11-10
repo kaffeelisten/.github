@@ -1,4 +1,4 @@
-# Kaffeelisten — brand
+# Kaffeelisten – brand
 
 The essentials, and where the full book lives.
 
@@ -10,7 +10,7 @@ authored by hand.
 
 ## The wordmark
 
-**Kaffee**listen — one unbroken word, `Kaffee` in ink and `listen` in amber, the colour changing
+**Kaffee**listen – one unbroken word, `Kaffee` in ink and `listen` in amber, the colour changing
 mid-word with no gap. Beneath it: *Die Kaffeeliste – ohne Papier.*
 
 It stacks on two lines for tall or narrow surfaces. Never break the word, recolour either half,
@@ -20,7 +20,7 @@ set it light, or letterspace it loosely.
 
 | | |
 |---|---|
-| `logo/logo.svg` | The logo — amber rounded square, white line cappuccino. |
+| `logo/logo.svg` | The logo – amber rounded square, white line cappuccino. |
 | `logo/logo-itc1.svg`, `-wald.svg`, `-imperium.svg` | Palette variants. |
 | `logo/logo-mono.svg` | Single colour, for one-colour printing. |
 | `logo/mark-cappuccino.svg`, `mark-deathstar.svg` | The marks alone, `currentColor`. |
@@ -28,7 +28,7 @@ set it light, or letterspace it loosely.
 
 The avatar is **not** the logo scaled down. It is its own artwork: a torn-paper cup, kept as `plates/avatar-cup.png` in the playbook and framed square with the deckled edge whole. It is **transparent**, so it sits on either GitHub theme, and it carries no wordmark and no tagline. Reframe it from the plate; do not scale the logo into the slot.
 
-`rx="40"` on a 200×200 viewBox — a 20% corner radius, kept at every size. The mark stays white on
+`rx="40"` on a 200×200 viewBox – a 20% corner radius, kept at every size. The mark stays white on
 the square in every palette.
 
 ## Colour
@@ -46,7 +46,7 @@ amber.
 
 ## Type
 
-**Inter** — 800 for the wordmark with tight tracking, 400 for the tagline. **JetBrains Mono** for
+**Inter** – 800 for the wordmark with tight tracking, 400 for the tagline. **JetBrains Mono** for
 figures and identifiers.
 
 ## The assets here
@@ -64,7 +64,7 @@ figures and identifiers.
 | `assets/x-header.jpg` | 1500×500. X / Twitter header; the bottom-left is kept calm for the profile picture. |
 | `assets/story.jpg` | 1080×1920. Story; top and bottom kept clear for the platform's UI. |
 
-Every file is rebuilt from pixels only — no EXIF, no XMP, no C2PA chunk.
+Every file is rebuilt from pixels only – no EXIF, no XMP, no C2PA chunk.
 
 ## Using them
 
@@ -77,6 +77,6 @@ Every file is rebuilt from pixels only — no EXIF, no XMP, no C2PA chunk.
 
 ## Not the design system
 
-Component specs, spacing, the type scale and the semantic tokens live in the product repository —
+Component specs, spacing, the type scale and the semantic tokens live in the product repository –
 `docs/design-system.md` and `docs/design-foundation.md`. The colours above are copied *from* the
 app's `index.css`. Where the two disagree, the product repository wins.
