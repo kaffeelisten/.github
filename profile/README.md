@@ -1,11 +1,11 @@
-<img src="https://raw.githubusercontent.com/kaffeelisten/.github/main/brand/assets/readme-banner.jpg" alt="Kaffeelisten — die Kaffeeliste, ohne Papier" width="860">
+<img src="https://raw.githubusercontent.com/kaffeelisten/.github/main/brand/assets/readme-banner.jpg" alt="Kaffeelisten – die Kaffeeliste, ohne Papier" width="860">
 
 # Kaffeelisten
 
 **The paper coffee list, without the paper.**
 
 A shared tablet stands by the coffee machine. You tap your company, tap your name, tap what you
-took, and confirm. The screen resets itself. No login, no account, nothing to install — the whole
+took, and confirm. The screen resets itself. No login, no account, nothing to install – the whole
 thing takes a few seconds, which is the only reason a system like this gets used instead of
 ignored.
 
@@ -29,7 +29,7 @@ seconds, standing up, one-handed, holding a cup.** Everything else followed from
 
 | | |
 |---|---|
-| **Frontend** | React, Vite, TypeScript, Tailwind — a PWA, installable on the tablet |
+| **Frontend** | React, Vite, TypeScript, Tailwind – a PWA, installable on the tablet |
 | **Database** | PostgreSQL on Supabase, with row-level security |
 | **API and jobs** | serverless functions, plus a scheduled month-end run |
 | **Mail** | the monthly report, as the email body rather than an attachment |
@@ -57,7 +57,7 @@ project normally stops.
 ## Running it somewhere else
 
 Several campuses have the same sheet of paper. If yours is one of them, open an issue or get in
-touch — the second deployment is deliberately much cheaper than the first.
+touch – the second deployment is deliberately much cheaper than the first.
 
 Security reports go to [`SECURITY.md`](https://github.com/kaffeelisten/.github/blob/main/SECURITY.md),
 not to the issue tracker.

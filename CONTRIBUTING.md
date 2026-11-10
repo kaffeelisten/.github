@@ -5,7 +5,7 @@ wins where it is more specific.
 
 ## Before you write code
 
-**Open an issue first** for anything beyond a typo. Not bureaucracy — this project has a live
+**Open an issue first** for anything beyond a typo. Not bureaucracy – this project has a live
 campus deployment and a narrow scope, so the useful conversation is usually about whether a change
 belongs here at all, and that conversation is cheaper before the work than after it.
 
@@ -18,7 +18,7 @@ Pull requests changing these will be declined, however well made:
 
 - **No login for the member-facing flow.** Zero friction is the product. An account is the thing
   that stops it being used.
-- **No payment processing** — card, SEPA debit or online payment.
+- **No payment processing** – card, SEPA debit or online payment.
 - **Nothing is deleted.** Months are archived; archives are kept indefinitely.
 - **Migrations are the only path to a schema change.** No editing schema in a dashboard, ever.
 - **German-first UI copy.** English for developer-facing labels and code comments.
@@ -48,7 +48,7 @@ changelog entries.
 
 ## Stacked pull requests
 
-For a change large enough to review in layers, use `gh stack` — `init`, `add`, `submit`, and
+For a change large enough to review in layers, use `gh stack` – `init`, `add`, `submit`, and
 `gh stack merge` for an atomic all-or-nothing merge. Do not hand-build a stack out of
 `gh pr create --base`, and note that a stack has its own number, which is not a pull request
 number.
@@ -109,7 +109,7 @@ And when SQL changed:
 scripts/test-migrations.sh
 ```
 
-These repositories are npm workspaces — `npm ci` runs at the root, never in a sub-package.
+These repositories are npm workspaces – `npm ci` runs at the root, never in a sub-package.
 
 Add a `CHANGELOG.md` entry under `[Unreleased]` for anything user-visible. Internal refactors and
 CI tweaks do not need one.
@@ -140,7 +140,7 @@ Only the founders merge to `main`.
 
 ## Secrets
 
-Never commit one. Never paste one into an issue, a pull request or a comment — including in a
+Never commit one. Never paste one into an issue, a pull request or a comment – including in a
 screenshot or a log excerpt, which is the usual way it happens. If you think you have exposed one,
 say so immediately; rotating a key is a small job and finding out late is not.
 
