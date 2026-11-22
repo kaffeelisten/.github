@@ -20,43 +20,16 @@ set it light, or letterspace it loosely.
 
 | | |
 |---|---|
-| `logo/logo.svg` | The logo: the coffee ring in ink on its own kraft paper, square. |
-| `logo/logo-mono.svg` | The ring alone, one path, `currentColor`. With the ring, the one-colour logo and the mark on its own are the same file, where the old set had two. |
-| `logo/avatar-310.png` | The organisation avatar. Upload this file. **Opaque**, unlike the cup avatar it replaces, because the mark is paper and paper is not transparent. |
-| `logo/mark-deathstar.svg`, `logo/logo-imperium.svg` | The Imperium mark. Nothing to do with the cup or the ring, kept as it was. |
+| `logo/logo.svg` | The logo – amber rounded square, white line cappuccino. |
+| `logo/logo-itc1.svg`, `-wald.svg`, `-imperium.svg` | Palette variants. |
+| `logo/logo-mono.svg` | Single colour, for one-colour printing. |
+| `logo/mark-cappuccino.svg`, `mark-deathstar.svg` | The marks alone, `currentColor`. |
+| `logo/avatar-1024.png`, `-512.png` | The organisation avatar: the mark on brand paper. Upload the 1024; the 512 is for anywhere that wants a smaller file. |
 
-**The logo is the coffee ring, and it is traced rather than drawn.** It is cut out of the style
-master by `brand/ring.py` **in the private `kaffeelisten/playbook` repository**, which is not
-shipped here and is named so that the provenance is checkable by whoever has it. The outline is
-a real stain's outline, which means the outline is a real stain's outline,
-with its real flecks and its real breaks. It is never a circle: a stain's whole content is that
-it is irregular, and a perfectly round version of it was built once and rejected by two readers
-in the same words.
+The avatar is **not** the logo scaled down. It is its own artwork: a torn-paper cup, kept as `plates/avatar-cup.png` in the playbook and framed square with the deckled edge whole. It is **transparent**, so it sits on either GitHub theme, and it carries no wordmark and no tagline. Reframe it from the plate; do not scale the logo into the slot.
 
-**It carries its own paper on purpose.** A bare stain-coloured ring on transparency sits on
-whatever the platform puts behind it, and on a dark tab it disappears. Stain on kraft measures a
-contrast of 2.54, the lowest pairing in the kit; ink on kraft measures 7.01 and holds at 16 px.
-So the small mark is drawn in ink, not in stain. It is the same ring: at a size where the
-stain's colour cannot be read, the colour gives way and the shape does not.
-
-**The avatar is the stain itself, not the ink version, and that is measured rather than
-assumed.** The paragraph above says stain on kraft is 2.54 and cannot carry a mark at
-16 px, which is true of a favicon, where the whole tile is 16 px and the rim is one pixel
-of it. An avatar is a different problem: GitHub draws it from 20 px upward and the ring
-fills about seven tenths of the tile, so at 20 px the rim is still two pixels across and
-still reads as a ring. Rendered at 20, 32, 40, 64 and 96 px before this was decided. It is
-faint at 20 px, and that is accepted: what the avatar has to say at that size is "a square
-of brown paper", and it says it.
-
-**No corner radius.** A sheet of paper has corners. The old logo was an amber rounded square
-with a white outlined cup in it, `rx="40"` on a 200×200 viewBox; that cup was rejected on
-21 November, and the two palette variants that were variants of *it* went with it, along
-with the cup mark on its own and both avatar sizes.
-
-**The avatar is 310 px square, and that is not an oversight.** It is cut from the master at 1:1
-and the master has no more of it. Its paper fibre measures 2.491; resampled to 512 it measures
-1.433, against the plates' own range of 1.759 to 2.271. The fibre is gone and what is left is a
-smooth brown disc. Upscaling it would be inventing paper, so it ships at the size it exists at.
+`rx="40"` on a 200×200 viewBox – a 20% corner radius, kept at every size. The mark stays white on
+the square in every palette.
 
 ## Colour
 
