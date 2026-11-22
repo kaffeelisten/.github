@@ -54,8 +54,8 @@ with a white outlined cup in it, `rx="40"` on a 200×200 viewBox; that cup was r
 with the cup mark on its own and both avatar sizes.
 
 **The avatar is 310 px square, and that is not an oversight.** It is cut from the master at 1:1
-and the master has no more of it. Resampled to 512 its paper fibre measures 1.257 against the
-plates' own range of 1.759 to 2.271, which is to say the fibre is gone and what is left is a
+and the master has no more of it. Its paper fibre measures 2.491; resampled to 512 it measures
+1.433, against the plates' own range of 1.759 to 2.271. The fibre is gone and what is left is a
 smooth brown disc. Upscaling it would be inventing paper, so it ships at the size it exists at.
 
 ## Colour
