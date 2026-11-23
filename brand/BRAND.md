@@ -49,14 +49,19 @@ that a paper-coloured mark vanishes on them, so the choice is arithmetic:
 
 | ground | hex | dark ink | light ink | use |
 |---|---|---|---|---|
-| paper | `#FAFAF9` | 12.75 | 1.0 | **dark** |
-| milk | `#F5EFE6` | 11.65 | 1.09 | **dark** |
-| kraft | `#C8A882` | 5.95 | 2.14 | **dark** |
-| amber | `#D97706` | 4.18 | 3.05 | **dark** |
-| stain | `#A1662F` | 2.83 | 4.51 | **light** |
-| wald | `#4D7C0F` | 2.67 | 4.78 | **light** |
-| espresso | `#4A2C17` | 1.06 | 12.08 | **light** |
-| ink | `#1C1917` | 1.31 | 16.74 | **light** |
+| paper | `#FAFAF9` | 12.75 | 1.32 | **dark** |
+| milk | `#F5EFE6` | 11.65 | 1.2 | **dark** |
+| kraft | `#C8A882` | 5.95 | 1.63 | **dark** |
+| amber | `#D97706` | 4.18 | 2.32 | **dark** |
+| stain | `#A1662F` | 2.83 | 3.43 | **light** |
+| wald | `#4D7C0F` | 2.67 | 3.63 | **light** |
+| espresso | `#4A2C17` | 1.06 | 9.19 | **light** |
+| ink | `#1C1917` | 1.31 | 12.73 | **light** |
+
+The two inks are `#4D2412` and `#F5D7B7`. **The light one is not white.**
+`#FAFAF9` is the ground this brand prints on, not an ink it prints in, and on espresso it reads
+as a hole cut in the page. `#F5D7B7` is the colour of the torn sheet inside the mark
+itself, so the light cut is the mark's own paper used as ink.
 
 Computed by `python brand/vector.py grounds` in the playbook.
 
