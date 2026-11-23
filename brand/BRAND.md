@@ -18,18 +18,27 @@ set it light, or letterspace it loosely.
 
 ## The logo
 
+**The logo is the torn-paper cup.** It is one drawing in four cuts, and there is no longer a
+separate badge: the amber rounded square with the white line cappuccino was rejected on
+21 November 2026 and its files are gone from this folder.
+
 | | |
 |---|---|
-| `logo/logo.svg` | The logo – amber rounded square, white line cappuccino. |
-| `logo/logo-itc1.svg`, `-wald.svg`, `-imperium.svg` | Palette variants. |
-| `logo/logo-mono.svg` | Single colour, for one-colour printing. |
-| `logo/mark-cappuccino.svg`, `mark-deathstar.svg` | The marks alone, `currentColor`. |
-| `logo/avatar-1024.png`, `-512.png` | The organisation avatar: the mark on brand paper. Upload the 1024; the 512 is for anywhere that wants a smaller file. |
+| `logo/mark.svg` | The logo. Full colour, with the paper grain as real geometry. |
+| `logo/mark-one-ink.svg` | One ink, `currentColor`. Stitch, vinyl, stamp, single-colour press. |
+| `logo/mark-reverse.svg` | Knocked out of a dark plane. |
+| `logo/mark-small.svg` | **The cup alone.** Below about 32 px. |
+| `logo/avatar-1024.png`, `-512.png` | The organisation avatar, rendered from `mark.svg`. Upload the 1024. |
 
-The avatar is **not** the logo scaled down. It is its own artwork: a torn-paper cup, kept as `plates/avatar-cup.png` in the playbook and framed square with the deckled edge whole. It is **transparent**, so it sits on either GitHub theme, and it carries no wordmark and no tagline. Reframe it from the plate; do not scale the logo into the slot.
+**Use `mark-small.svg` below 32 px and never shrink `mark.svg` into that slot.** Put beside the
+old badge at 16 and 24 px the full mark lost outright: it goes to mass while a filled square stays
+legible. The crescent of torn paper and the leaves are what make it a collage and they are also
+what fills in first, so the small cut drops them and keeps the cup.
 
-`rx="40"` on a 200×200 viewBox – a 20% corner radius, kept at every size. The mark stays white on
-the square in every palette.
+**The source is `brand/vector.py` in the playbook**, which draws these from the approved artwork
+and measures them. Do not edit an SVG here by hand; change the source and rebuild, or the four
+cuts drift apart. What the gate says the cuts can make: screen print from 33 mm, embroidery from
+67 mm, cut vinyl from 53 mm, and the small cut from 20 px.
 
 ## Colour
 
