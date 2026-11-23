@@ -18,18 +18,61 @@ set it light, or letterspace it loosely.
 
 ## The logo
 
+**The logo is the torn-paper cup.** It is one drawing in four cuts, and there is no longer a
+separate badge: the amber rounded square with the white line cappuccino was rejected on
+21 November 2026 and its files are gone from this folder.
+
 | | |
 |---|---|
-| `logo/logo.svg` | The logo – amber rounded square, white line cappuccino. |
-| `logo/logo-itc1.svg`, `-wald.svg`, `-imperium.svg` | Palette variants. |
-| `logo/logo-mono.svg` | Single colour, for one-colour printing. |
-| `logo/mark-cappuccino.svg`, `mark-deathstar.svg` | The marks alone, `currentColor`. |
-| `logo/avatar-1024.png`, `-512.png` | The organisation avatar: the mark on brand paper. Upload the 1024; the 512 is for anywhere that wants a smaller file. |
+**Three levels of reduction, each in two inks.**
 
-The avatar is **not** the logo scaled down. It is its own artwork: a torn-paper cup, kept as `plates/avatar-cup.png` in the playbook and framed square with the deckled edge whole. It is **transparent**, so it sits on either GitHub theme, and it carries no wordmark and no tagline. Reframe it from the plate; do not scale the logo into the slot.
+| level | file | what it keeps | reads down to |
+|---|---|---|---|
+| 1 | `logo/mark-cup.svg` | the cup and its steam | 24 px |
+| 2 | `logo/mark-mono.svg` | the cup, the leaves, the torn crescent | 32 px |
+| 3 | `logo/mark.svg` | everything, in colour, with the paper | 96 px |
 
-`rx="40"` on a 200×200 viewBox – a 20% corner radius, kept at every size. The mark stays white on
-the square in every palette.
+| | |
+|---|---|
+| `logo/mark-cup-light.svg`, `mark-mono-light.svg` | the same geometry with the ink baked light |
+| `logo/avatar-1024.png`, `-512.png` | The organisation avatar, the approved artwork. Upload the 1024. |
+
+Levels one and two are drawn in `currentColor`, so a page sets the ink and one file serves both.
+The `-light` files exist for an `<img>` tag and a printer, which have no colour to inherit, and
+they are generated from the same geometry so they cannot drift. **Level three needs no light
+version**: it carries its own sheet of paper.
+
+### Which ink on which ground
+
+The light cut is not a black-background cut. Two of this brand's own grounds are light enough
+that a paper-coloured mark vanishes on them, so the choice is arithmetic:
+
+| ground | hex | dark ink | light ink | use |
+|---|---|---|---|---|
+| paper | `#FAFAF9` | 12.75 | 1.32 | **dark** |
+| milk | `#F5EFE6` | 11.65 | 1.2 | **dark** |
+| kraft | `#C8A882` | 5.95 | 1.63 | **dark** |
+| amber | `#D97706` | 4.18 | 2.32 | **dark** |
+| stain | `#A1662F` | 2.83 | 3.43 | **light** |
+| wald | `#4D7C0F` | 2.67 | 3.63 | **light** |
+| espresso | `#4A2C17` | 1.06 | 9.19 | **light** |
+| ink | `#1C1917` | 1.31 | 12.73 | **light** |
+
+The two inks are `#4D2412` and `#F5D7B7`. **The light one is not white.**
+`#FAFAF9` is the ground this brand prints on, not an ink it prints in, and on espresso it reads
+as a hole cut in the page. `#F5D7B7` is the colour of the torn sheet inside the mark
+itself, so the light cut is the mark's own paper used as ink.
+
+Computed by `python brand/vector.py grounds` in the playbook.
+
+**The avatars are the approved artwork and are not re-rendered from the vector.** They were
+overwritten with a re-render once and put back: the approved file is used precisely because
+nothing was redrawn, so it cannot drift from what was approved.
+
+**The source is `brand/vector.py` in the playbook**, which draws these from the approved artwork
+and measures them. Do not edit an SVG here by hand; change the source and rebuild, or the four
+cuts drift apart. What the gate says these can make: level two from 32 mm screen print, 63 mm
+embroidery and 50 mm cut vinyl; level one from 18 mm, 37 mm and 29 mm.
 
 ## Colour
 
