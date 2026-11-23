@@ -25,20 +25,22 @@ separate badge: the amber rounded square with the white line cappuccino was reje
 | | |
 |---|---|
 | `logo/mark.svg` | The logo. Full colour, with the paper grain as real geometry. |
-| `logo/mark-one-ink.svg` | One ink, `currentColor`. Stitch, vinyl, stamp, single-colour press. |
-| `logo/mark-reverse.svg` | Knocked out of a dark plane. |
-| `logo/mark-small.svg` | **The cup alone.** Below about 32 px. |
-| `logo/avatar-1024.png`, `-512.png` | The organisation avatar, rendered from `mark.svg`. Upload the 1024. |
+| `logo/mark-mono.svg` | One ink, `currentColor`. Stitch, vinyl, stamp, single-colour press, and anything small. |
+| `logo/avatar-1024.png`, `-512.png` | The organisation avatar, the approved artwork. Upload the 1024. |
 
-**Use `mark-small.svg` below 32 px and never shrink `mark.svg` into that slot.** Put beside the
-old badge at 16 and 24 px the full mark lost outright: it goes to mass while a filled square stays
-legible. The crescent of torn paper and the leaves are what make it a collage and they are also
-what fills in first, so the small cut drops them and keeps the cup.
+**Two files, and only two.** There is no separate reverse file: the mono cut is drawn in
+`currentColor`, so reversing it is the colour it inherits rather than a third drawing that can
+drift. **Use the mono cut below 64 px.** It reads down to about 32 px; at 16 px it is a smudge,
+which is what a collage mark does and not something a cleaner file fixes.
+
+**The avatars are the approved artwork and are not re-rendered from the vector.** They were
+overwritten with a re-render once and put back: the approved file is used precisely because
+nothing was redrawn, so it cannot drift from what was approved.
 
 **The source is `brand/vector.py` in the playbook**, which draws these from the approved artwork
 and measures them. Do not edit an SVG here by hand; change the source and rebuild, or the four
-cuts drift apart. What the gate says the cuts can make: screen print from 33 mm, embroidery from
-67 mm, cut vinyl from 53 mm, and the small cut from 20 px.
+cuts drift apart. What the gate says the mono cut can make: screen print from 32 mm, embroidery
+from 63 mm, cut vinyl from 50 mm.
 
 ## Colour
 
